@@ -1,0 +1,61 @@
+.main {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main p {
+  max-width: 60%;
+  margin: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cards-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 5rem;
+}
+
+.card .img {
+  flex: 2;
+}
+
+.card p {
+  align-self: center;
+}
+
+.card .img.first {
+  background: url("../images/Support_2-46.png") no-repeat center/cover;
+}
+
+.card .img.second {
+  background: url("../images/serveur.png") no-repeat center/contain;
+}
+
+.card .img.third {
+  background: url("../images/support.png") no-repeat center/contain;
+}
+
+.card .img.fourth {
+  background: url("../images/client.png") no-repeat center/contain;
+}

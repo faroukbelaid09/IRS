@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --header-color: #2c3e50d2;
+  --solid-color: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.slider {
+  position: relative;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.slide-arrow::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("./images/arrow.png") no-repeat center/cover;
+}
+
+.slide-arrow:hover::before {
+  cursor: pointer;
+}
+
+.next-slide {
+  right: 1rem;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.previews-slide {
+  left: 1rem;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.slide-container {
+  position: relative;
+  min-height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .slide-container.active {
+  display: flex;
+} */
+
+.slide-container::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.slide-container.first {
+  background: url("./images/img2.jpg") no-repeat center/cover fixed;
+}
+
+.slide-container.second {
+  background: url("./images/img1.jpg") no-repeat center/cover fixed;
+}
+
+.slide-container.third {
+  background: url("./images/img3.jpg") no-repeat center/cover fixed;
+}
+
+.slide-container.fourth {
+  background: url("./images/imlg4.png") no-repeat center/cover fixed;
+}
+
+.slide-container h1 {
+  color: red;
+  font-size: 2rem;
+  animation: titleAnimation 2s;
+  /* overflow: hidden; */
+}
+
+.slide-container.fourth h1 {
+  animation: longTitleAnimation 2s;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateX(250px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes longTitleAnimation {
+  0% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.read-more-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem 2rem;
+  border: 1px solid var(--header-color);
+  border-radius: 10px;
+  color: white;
+  background-color: var(--header-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: white;
+  color: var(--solid-color);
+}
+
+/* Our Services */
+
+.our-services {
+  margin: 5rem 7rem;
+}
+
+.title {
+  text-align: center;
+  color: var(--solid-color);
+  font-size: 2rem;
+  margin: 3rem 1rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  min-height: 380px;
+  margin: 2rem 0;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card .img {
+  position: relative;
+  flex: 2;
+}
+
+.card .img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.card h4 {
+  padding: 1rem;
+}
+
+.card .read-more-btn {
+  margin: 1rem;
+  text-align: center;
+}
+
+.first-card .img {
+  background: url("./images/telecom.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.second-card .img {
+  background: url("./images/logiciel.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.third-card .img {
+  background: url("./images/integration.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.fourth-card .img {
+  background: url("./images/video.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.fifth-card .img {
+  background: url("./images/auditt.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sexth-card .img {
+  background: url("./images/img1.jpg") no-repeat center/cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Our Clients */
+.our-clients-partners {
+  padding: 3rem 7rem;
+}
+
+.our-clients .title {
+  margin-bottom: 5rem;
+}
+
+.clients-partners-conatiner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.client-partner {
+  position: relative;
+  width: 300px;
+  min-height: 200px;
+  margin-bottom: 2rem;
+}
+
+.client-partner::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.first-client {
+  background: url("./images/download.png") no-repeat center/contain;
+}
+
+.second-client {
+  background: url("./images/fh2mre.png") no-repeat center/contain;
+}
+
+.third-client {
+  background: url("./images/logo-5.png") no-repeat center/contain;
+}
+
+.fourth-client {
+  background: url("./images/Logo_DGSS_200.png") no-repeat center/contain;
+}
+
+.fifth-client {
+  background: url("./images/logo.jpg") no-repeat center/contain;
+}
+
+.sexth-client {
+  background: url("./images/Pactilis-def.png") no-repeat center/contain;
+}
+
+/* Our Partners */
+
+.first-partner {
+  background: url("./images/ingram.jpg") no-repeat center/contain;
+}
+
+.second-partner {
+  background: url("./images/config.png") no-repeat center/contain;
+}
+
+.third-partner {
+  background: url("./images/microsofonet.jpg") no-repeat center/contain;
+}
+
+.fourth-partner {
+  background: url("./images/dell.jpg") no-repeat center/contain;
+}
+
+.fifth-partner {
+  background: url("./images/solution.jpg") no-repeat center/contain;
+}
+
+.sexth-partner {
+  background: url("./images/fortinet.jpg") no-repeat center/contain;
+}
+
+.seventh-partner {
+  background: url("./images/veritas.jpg") no-repeat center/contain;
+}
+
+.eight-partner {
+  background: url("./images/sophos.jpg") no-repeat center/contain;
+}
+
+.ninth-partner {
+  background: url("./images/disway.jpg") no-repeat center/contain;
+}
+
+/* Contact us */
+
+.contact-us {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("./images/contact.png") no-repeat center/cover;
+  padding: 3rem 7rem;
+}
+
+.contact-us .title {
+  margin-bottom: 5rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-links {
+  flex: 1;
+  list-style-type: none;
+}
+
+.contact-link {
+  margin: 1.5rem 1rem;
+}
+
+.contact-link i {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.contact-link .icon-correction {
+  margin-right: 1.5rem;
+}
+
+.contact-link span {
+  color: var(--solid-color);
+  font-weight: 700;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+}
+
+.contact-form label {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.contact-form input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  min-height: 35px;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input:focus {
+  outline: none;
+}
+
+.contact-form textarea {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+  padding: 0.5rem 0.9rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form textarea:focus {
+  outline: none;
+}
+
+.contact-form input:last-of-type:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1175px) {
+  .contact-container {
+    flex-direction: column;
+    padding-left: 8rem;
+  }
+
+  .contact-form {
+    order: -1;
+  }
+
+  .contact-form input.submit-btn {
+    width: 30%;
+    margin: auto;
+  }
+
+  .contact-form textarea {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .our-services {
+    margin: 3rem 1rem;
+  }
+
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .contact-us {
+    padding: 2rem 2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .contact-form input {
+    width: 100%;
+  }
+
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .our-clients-partners p {
+    text-align: center;
+  }
+}

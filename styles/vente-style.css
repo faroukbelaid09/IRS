@@ -1,0 +1,66 @@
+.main {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main p {
+  max-width: 60%;
+  margin: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: center;
+}
+.clients-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 60%;
+  margin: 2rem;
+}
+
+.client {
+  width: 200px;
+  height: 200px;
+  margin: 2rem;
+}
+
+.client.first-partner {
+  background: url("../images/dellemc.png") no-repeat center/contain;
+}
+
+.client.second-partner {
+  background: url("../images/cisco.PNG") no-repeat center/contain;
+}
+
+.client.third-partner {
+  background: url("../images/veeam.png") no-repeat center/contain;
+}
+
+.client.fourth-partner {
+  background: url("../images/vmware.png") no-repeat center/contain;
+}
+
+.client.fifth-partner {
+  background: url("../images/microsoft.PNG") no-repeat center/contain;
+}
+
+.client.sexth-partner {
+  background: url("../images/hewelett.jpg") no-repeat center/contain;
+}
+
+.client.seventh-partner {
+  background: url("../images/fortinet.PNG") no-repeat center/contain;
+}
+
+.client.egith-partner {
+  background: url("../images/kasp.png") no-repeat center/contain;
+}

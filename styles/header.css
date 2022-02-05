@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --header-color: #2c3e50d2;
+  --solid-color: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-color);
+  min-height: 5rem;
+  padding: 0 7rem;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 20px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.navbar-links li a:hover {
+  color: burlywood;
+}
+
+.humberger-menu {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  display: none;
+}
+
+.humberger-menu div {
+  height: 4px;
+  width: 100%;
+  margin: 8px 0;
+  background-color: white;
+}
+
+@media only screen and (max-width: 960px) {
+  header {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 2rem;
+    min-height: 6rem;
+  }
+
+  .humberger-menu {
+    display: block;
+    right: 2rem;
+  }
+
+  .humberger-menu:hover {
+    cursor: pointer;
+  }
+
+  .navbar-links {
+    position: absolute;
+    background-color: var(--header-color);
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    padding: 0 7rem;
+    text-align: center;
+    transform: translateY(-150%);
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+
+  .navbar-links.show {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links li a {
+    display: inline-block;
+    margin: 1rem 0;
+  }
+}
